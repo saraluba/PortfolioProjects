@@ -148,6 +148,24 @@ where trip_distance > 0 and fare_amount = 0
 update "2020_taxi_trips" 
 set fare_amount = 2.5 + (trip_distance * 2.5)
 where trip_distance > 0 and fare_amount = 0
+
+--if distance is < 0, change it into positive
+
+update "2017_taxi_trips" 
+set trip_distance = -trip_distance 
+where trip_distance < 0
+
+update "2018_taxi_trips" 
+set trip_distance = -trip_distance 
+where trip_distance < 0
+
+update "2019_taxi_trips" 
+set trip_distance = -trip_distance 
+where trip_distance < 0
+
+update "2020_taxi_trips" 
+set trip_distance = -trip_distance 
+where trip_distance < 0
 --------------------------------------------------------------------------------------------
 
 
